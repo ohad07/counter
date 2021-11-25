@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="margin-left: 500px; margin-top: 400px; color: lightblue;">COUNTER</h1>
+    <h1 id="result">0</h1>
+    <button id="buttonplus">+</button>
+    <button id="minesbutton">-</button>
+</body>
+<script>
+    //get the plus button element
+    let myCounter=0;
+   const buttonplus = document.getElementById("buttonplus");
+   const minesbutton = document.getElementById("minesbutton")
+   const result = document.getElementById("result");
+
+
+   buttonplus.addEventListener("click", function () {
+       myCounter= myCounter + 1
+       result.innerText = myCounter;
+
+   })
+
+
+
+   minesbutton .addEventListener("click", function () {
+       myCounter= myCounter - 1
+       result.innerText = myCounter;
+
+   })
+   
+
+</script>
+</html>
