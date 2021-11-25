@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 style="margin-left: 500px; margin-top: 400px; color: lightblue;">COUNTER</h1>
-    <h1 id="result">0</h1>
-    <button id="buttonplus">+</button>
-    <button id="minesbutton">-</button>
+    <h1 style="margin-left: 500px; margin-top: 200px; color: rgb(10, 103, 134); font-size: 50px;">COUNTER</h1>
+    <h1 id="result" style="font-size: 50px; margin-left: 600px; color: rgb(33, 238, 6); ">0</h1>
+    
+    <button id="buttonplus" style="margin-left: 440px; width: 100px; height: 30px; border-radius: 5px;">Increase</button>
+    <button type="reset" id="resetbutton" style="margin-left: 30px; width: 100px; height: 30px;  border-radius: 5px;">Reset</button>
+    <button id="minesbutton" style="margin-left:30px; width: 100px; height: 30px;  border-radius: 5px;">Decrease</button>
+    
 </body>
 <script>
     //get the plus button element
@@ -26,7 +29,11 @@
 
    })
 
+   resetbutton.addEventListener("click", function () {
+       myCounter= myCounter * 0
+       result.innerText = myCounter;
 
+   })
 
    minesbutton .addEventListener("click", function () {
        myCounter= myCounter - 1
